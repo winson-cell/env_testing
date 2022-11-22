@@ -20,6 +20,8 @@ async function bootstrap() {
   const port = configService.get("port")
   await app.listen(port);
   console.log(`Application is running on: ${await app.getUrl()}`);
+  console.log(process.env.PORT)
+  console.log(process.env.NODE_ENV)
 }
 
 bootstrap();
